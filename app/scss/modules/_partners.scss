@@ -1,0 +1,32 @@
+.brand_title{
+	margin-bottom: 40px;
+	font-size: 30px;
+}
+
+ul{
+	display: flex;
+	justify-content:center;
+	flex-direction:column;
+	.branding{
+		margin-bottom: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media(min-width: 768px){
+	.brand_title{
+		margin-bottom: 88px;
+		font-size: 45px;
+	}
+	ul{
+		flex-direction:row;
+		.branding{
+			margin-bottom: 0;
+		}
+	}
+
+}

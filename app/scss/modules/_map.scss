@@ -1,0 +1,64 @@
+.relative{
+	position: relative;
+}
+
+.overflow-hidden{
+	overflow: hidden;
+}
+
+#map{
+	width: 100%;
+	height: 440px;
+}
+
+
+.map-overlay.hidden{
+	opacity: 0;
+	visibility: hidden;
+}
+
+.map-overlay{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(17,17,17,0.95);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+		.map-title-inner{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			span{
+				font-size: 35px;
+				color:var(--white);
+			}
+			.map-title{
+				font-size: 20px;
+				transition: .3s;
+				position: relative;
+				&:before{
+					content:'';
+					position: absolute;
+					left: 50%;
+					right: 50%;
+					width: 0;
+					background-color: currentColor;
+					transition: .3s;
+					height: 2px;
+					bottom: -5px;
+				}
+				&:hover{
+					cursor: pointer;
+				}
+				&:hover:before{
+					left:0;
+					right: 0;
+					width: 100%;
+				}
+			}
+		}
+}
+
